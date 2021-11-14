@@ -1,9 +1,10 @@
 name: Test Github Env
 
 on:
-  watch:
-    types: [started]
-        
+  push:
+    branches:
+      - env-test
+      
 jobs:
   Envtest:
     runs-on: macos-latest
