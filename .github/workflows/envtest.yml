@@ -1,0 +1,16 @@
+name: Test Github Env
+
+on:
+  watch:
+    types: [started]
+        
+jobs:
+  Envtest:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout
+
+    - name: Test variable from script
+      run: zsh build_test.zsh
